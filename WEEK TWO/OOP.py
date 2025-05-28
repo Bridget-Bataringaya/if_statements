@@ -73,5 +73,50 @@ sparrow1= sparrow()
        
        
 flight_test(eagle1)
-flight_test(sparrow1)                
+flight_test(sparrow1) 
+
+
+#abstraction
+#abstract class and interfaces
+
+#example four
+
+from abc import ABC, abstractmethod #Abstraction
+
+#starting a car engine and bike
+#define abstract class
+class vehicle(ABC):
+    @abstractmethod
+    def start(self):
+        pass #this method start has no implementation
     
+    #child class implementing the abstract method
+class car(vehicle):
+    def start(self):
+        print("car engine start starts")
+        
+#derive class implementing abstract method 
+
+class bike(vehicle):
+    def start(self):
+        print("bike engine start starts ")                       
+    
+#notes :
+#we can not create object of abstract class
+#demo live
+#vehicle1 = vehichle()# this would raise an error
+
+#Accepted : create objects of the subclass
+car1= car()
+bike1= bike()   
+
+car1.start()
+
+#Exercise
+#submit your work on github for method overriding, method overloading and MRO(method resolution order. two real world examples on the above)
+
+
+#ASSIGNMENT 
+#UNIVERSITY SYSTEM
+ 
+  
