@@ -41,20 +41,19 @@ product(1,2,3)
 
 #we need to also download multipledispatch
 #use pip install multipledispatch, for verification to know if you fully have it, you use the command , pip show multipledispatch
-'''from multipledispatch import dispatch
+from plum import dispatch
 
-@dispatch(int,int,int)
+@dispatch  # if we were to use multipledispatch, we would have
 
-def sum (a,b,c):
+def sum (a:int,b:int,c:int):
     result=a+b+c
     print(result)
     
-@dispatch(float,float,float)
-def sum(w,r,t):
+@dispatch
+def sum(w:float,r:float,t:float):
    result= w + r + t 
    print(result)   
    
    
 sum(2,3,4)
 sum(3.1,2.2,3.5)  
-''' 
